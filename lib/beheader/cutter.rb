@@ -7,8 +7,8 @@ module Beheader
       self.url = url
     end
 
-    def url_valid?
-      url =~ /\A#{URI::DEFAULT_PARSER.regexp[:ABS_URI]}\z/
+    def cut
+      
     end
 
   end
