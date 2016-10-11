@@ -18,6 +18,11 @@ describe Beheader::Constants do
         expect(url_characters).to include(numeral)
       end
     end
+
+    it 'does not contain special characters' do
+      expect(url_characters[/[^A-Za-z0-9]+/]).to eq nil
+    end
+
   end
 
 end
