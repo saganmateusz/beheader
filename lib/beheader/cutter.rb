@@ -1,18 +1,13 @@
 require 'uri'
 module Beheader
   class Cutter
-    attr_accessor :url
 
-    def initialize(url)
-      self.url = url
+    def self.recover(url)
+      Beheader::Parser.parse_to_base_10(url)
     end
 
-    def cut(url, keep_domain = false)
-     
-    end
-
-    def recover(integer)
-
+    def self.generate_short_url(id)
+      Beheader::Parser.parse_to_base_62(id)
     end
   end
 end
