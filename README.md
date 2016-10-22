@@ -1,8 +1,8 @@
 # Beheader
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/beheader`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gems aims to provide a simple yet robust tool for link shortening.
+I really hate gems that do everything for you though, so I'm leaving some of the implementation to you.
+Yes, I trust you that much!
 
 ## Installation
 
@@ -22,7 +22,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You need a database object holding the original url.
+```
+Beheader::Cutter.generate_short_url(id)
+```
+will return a very short string that you can use as a relative url in your app.
+```
+Beheader::Cutter.recover(short_string)
+```
+will return the original number that generated the string.
 
 ## Development
 

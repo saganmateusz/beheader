@@ -1,3 +1,4 @@
+#A class holding the Base62 characters
 module Beheader
   module Constants
     URL_CHARACTERS = ('abcdefghijklmnopqrstuvwxyz' + 
